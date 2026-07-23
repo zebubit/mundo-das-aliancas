@@ -127,6 +127,14 @@
     border-radius:12px;padding:46px 24px;font-size:14px;line-height:1.9}
   .gal-empty b{color:var(--gold-soft)}
 
+  /* Reels do Instagram */
+  .reels{background:var(--bg2)}
+  .reels-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+  .reels-grid .reel{border-radius:14px;overflow:hidden;border:1px solid var(--gold-line);background:#000;box-shadow:0 14px 34px rgba(0,0,0,.5)}
+  .reels-grid iframe{width:100%;height:560px;border:0;display:block;background:#000}
+  @media (max-width:1000px){ .reels-grid{grid-template-columns:1fr 1fr} }
+  @media (max-width:620px){ .reels-grid{grid-template-columns:1fr;max-width:380px;margin:0 auto} }
+
   /* Diferenciais */
   .difs{background:var(--bg)}
   .dif-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
@@ -212,6 +220,7 @@
       <a href="#sobre">Sobre</a>
       <a href="#aliancas">Alianças</a>
       <a href="#galeria">Joias</a>
+      <a href="#reels">Reels</a>
       <a href="#contato">Contato</a>
       <a class="btn btn-gold" data-wa data-msg="Olá! Vim pelo site do Mundo das Alianças e quero falar com vocês.">WhatsApp</a>
     </div>
@@ -287,6 +296,24 @@
       <p>Anéis, correntes, brincos e muito mais. Um brilho pra cada momento especial.</p>
     </div>
     <div class="gal-grid reveal" id="galGrid"><!-- preenchido pelo JS a partir de fotos/produtos/ --></div>
+  </div>
+</section>
+
+<!-- REELS -->
+<section class="sec reels" id="reels">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Instagram</div>
+      <h2>Nossos Reels</h2>
+      <div class="divider"></div>
+      <p>Acompanhe a Mundo das Alianças em vídeo. @mundodasaliancasuberaba</p>
+    </div>
+    <div class="reels-grid reveal">
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DYw6NOYhclp/embed" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DYe4qrSB9xF/embed" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DYDDmJTRvC7/embed" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div>
+      <div class="reel"><iframe src="https://www.instagram.com/reel/DWtKOUoBAYj/embed" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div>
+    </div>
   </div>
 </section>
 
