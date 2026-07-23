@@ -1,0 +1,8 @@
+COMO ORGANIZAR AS FOTOS (baixe do Insta e jogue aqui):
+
+/produtos  -> fotos dos produtos (uma boa por produto, de preferência quadrada ou vertical)
+/loja      -> fachada, ambiente interno, equipe, detalhes do lugar
+/logo      -> a logomarca (se tiver em PNG fundo transparente, melhor ainda)
+
+Dica: renomeie de forma simples, tipo produto-1.jpg, produto-2.jpg...
+Nao precisa caprichar no nome, eu organizo depois.
