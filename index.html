@@ -130,10 +130,23 @@
   /* Reels do Instagram */
   .reels{background:var(--bg2)}
   .reels-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
-  .reels-grid .reel{border-radius:14px;overflow:hidden;border:1px solid var(--gold-line);background:#000;box-shadow:0 14px 34px rgba(0,0,0,.5)}
-  .reels-grid iframe{width:100%;height:560px;border:0;display:block;background:#000}
-  @media (max-width:1000px){ .reels-grid{grid-template-columns:1fr 1fr} }
-  @media (max-width:620px){ .reels-grid{grid-template-columns:1fr;max-width:380px;margin:0 auto} }
+  .reels-grid .reel{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;border:1px solid var(--gold-line);
+    background-size:cover;background-position:center;box-shadow:0 14px 34px rgba(0,0,0,.5);display:block;transition:transform .3s,border-color .3s}
+  .reels-grid .reel:hover{transform:translateY(-4px);border-color:var(--gold-soft)}
+  .reels-grid .reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.4))}
+  .reels-grid .reel .play{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;
+    background:rgba(0,0,0,.45);border:2px solid rgba(255,255,255,.85);color:#fff;font-size:20px;padding-left:4px;
+    display:grid;place-items:center;z-index:2;transition:.3s}
+  .reels-grid .reel:hover .play{background:var(--gold);color:#1c1206;border-color:var(--gold)}
+  .ig-btn-wrap{text-align:center;margin-top:36px}
+  .ig-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:40px;
+    font-family:'Jost',sans-serif;font-size:13.5px;letter-spacing:1.4px;text-transform:uppercase;font-weight:500;color:#fff;
+    background:linear-gradient(45deg,#405DE6,#833AB4,#C13584,#E1306C,#FD1D1D,#F56040,#FCAF45);
+    box-shadow:0 12px 30px rgba(193,53,132,.42);transition:transform .3s,filter .3s}
+  .ig-btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+  .ig-btn svg{width:22px;height:22px;fill:#fff}
+  @media (max-width:1000px){ .reels-grid{grid-template-columns:1fr 1fr;max-width:520px;margin:0 auto} }
+  @media (max-width:620px){ .reels-grid{grid-template-columns:1fr 1fr;gap:12px} }
 
   /* Diferenciais */
   .difs{background:var(--bg)}
@@ -309,10 +322,16 @@
       <p>Acompanhe a Mundo das Alianças em vídeo. @mundodasaliancasuberaba</p>
     </div>
     <div class="reels-grid reveal">
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DYw6NOYhclp/embed" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DYe4qrSB9xF/embed" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DYDDmJTRvC7/embed" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div>
-      <div class="reel"><iframe src="https://www.instagram.com/reel/DWtKOUoBAYj/embed" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe></div>
+      <a class="reel" href="https://www.instagram.com/reel/DYw6NOYhclp/" target="_blank" rel="noopener" style="background-image:url('fotos/reels/reel-1.jpg')"><span class="play">▶</span></a>
+      <a class="reel" href="https://www.instagram.com/reel/DYe4qrSB9xF/" target="_blank" rel="noopener" style="background-image:url('fotos/reels/reel-2.jpg')"><span class="play">▶</span></a>
+      <a class="reel" href="https://www.instagram.com/reel/DYDDmJTRvC7/" target="_blank" rel="noopener" style="background-image:url('fotos/reels/reel-3.jpg')"><span class="play">▶</span></a>
+      <a class="reel" href="https://www.instagram.com/reel/DWtKOUoBAYj/" target="_blank" rel="noopener" style="background-image:url('fotos/reels/reel-4.jpg')"><span class="play">▶</span></a>
+    </div>
+    <div class="ig-btn-wrap reveal">
+      <a class="ig-btn" href="https://instagram.com/mundodasaliancasuberaba" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C4 15.58 4 15.2 4 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.06A4.94 4.94 0 1 0 12 16.94 4.94 4.94 0 0 0 12 7.06zm0 1.8a3.14 3.14 0 1 1 0 6.28 3.14 3.14 0 0 1 0-6.28zm5.13-2.93a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>
+        Siga no Instagram
+      </a>
     </div>
   </div>
 </section>
